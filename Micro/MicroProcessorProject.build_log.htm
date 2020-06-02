@@ -1,0 +1,56 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\20115\Desktop\Micro\MicroProcessorProject.uvproj
+Project File Date:  06/02/2020
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling startup_TM4C123.s...
+compiling main.c...
+interface_GPIO_KPD.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+GPIO.h(157): warning:  #188-D: enumerated type mixed with another type
+                 enuPinValue_loc=GET_BIT(GPIO_PORTA_DATA_R ,enuPinIndx_cpy);
+GPIO.h(161): warning:  #188-D: enumerated type mixed with another type
+                 enuPinValue_loc=GET_BIT(GPIO_PORTB_DATA_R ,enuPinIndx_cpy);
+GPIO.h(165): warning:  #188-D: enumerated type mixed with another type
+                 enuPinValue_loc=GET_BIT(GPIO_PORTC_DATA_R,enuPinIndx_cpy);
+GPIO.h(169): warning:  #188-D: enumerated type mixed with another type
+                 enuPinValue_loc=GET_BIT(GPIO_PORTD_DATA_R,enuPinIndx_cpy);
+GPIO.h(172): warning:  #188-D: enumerated type mixed with another type
+                 enuPinValue_loc=GET_BIT(GPIO_PORTE_DATA_R,enuPinIndx_cpy);
+GPIO.h(175): warning:  #188-D: enumerated type mixed with another type
+                 enuPinValue_loc=GET_BIT(GPIO_PORTF_DATA_R,enuPinIndx_cpy);
+main.c: 7 warnings, 0 errors
+compiling Prog_GPIO_KPD.c...
+interface_GPIO_KPD.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+Prog_GPIO_KPD.c(22): warning:  #188-D: enumerated type mixed with another type
+                GPIO_voidSetPinValue(KPD_PORT,u8ColIdx_Loc,GPIO_LOW);
+Prog_GPIO_KPD.c(25): warning:  #188-D: enumerated type mixed with another type
+                  enuPinValue_Loc=GPIO_enuGetPinValue(KPD_PORT,(u8RowIdx_Loc+COL_NB));
+Prog_GPIO_KPD.c(30): warning:  #188-D: enumerated type mixed with another type
+                                enuPinValue_Loc=GPIO_enuGetPinValue(KPD_PORT,(u8RowIdx_Loc+COL_NB));
+Prog_GPIO_KPD.c(33): warning:  #188-D: enumerated type mixed with another type
+         GPIO_voidSetPinValue(KPD_PORT,u8ColIdx_Loc,GPIO_HIGH);
+Prog_GPIO_KPD.c: 5 warnings, 0 errors
+linking...
+Program Size: Code=2388 RO-data=652 RW-data=28 ZI-data=908  
+".\MicroProcessorProject.axf" - 0 Error(s), 12 Warning(s).
+ne
+  #endif
+Prog_GPIO_KPD.c(22): warning:  #188-D: enumerated type mixed with another type
+                GPIO_voidSetPinValue(KPD_PORT,u8ColIdx_Loc,GPIO_LOW);
+Prog_GPIO_KPD.c(25): warning:  #188-D: enumerated type mixed with another type
+                  enuPinValue_Loc=GPIO_enuGetPinValue(KPD_PORT,(u8RowIdx_Loc+COL_NB));
+Prog_GPIO_KPD.c(30): warning:  #188-D: enumerated type mixed with another type
+                                enuPinValue_Loc=GPIO_enuGetPinValue(KPD_PORT,(u8RowIdx_Loc+COL_NB));
+Prog_GPIO_KPD.c(33): warning:  #188-D: enumerated type mixed with another type
+         GPIO_voidSetPinValue(KPD_PORT,u8ColIdx_Loc,GPIO_HIGH);
+Prog_GPIO_KPD.c: 5 warnings, 0 errors
+linking...
+Program Size: Code=2192 RO-data=652 RW-data=16 ZI-data=912  
+".\MicroProcessorProject.axf" - 0 Error(s), 18 Warning(s).
