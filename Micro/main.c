@@ -1,8 +1,9 @@
 #include "C:/Keil/Labware/inc/tm4c123gh6pm.h"
 #include "GPIO.h"
 #include "stdio.h"
+#include "C:/Users/20115/Desktop/TIVAC.h"
 #include "stdint.h"
-#include "interface_GPIO_KPD.h"
+#include "C:/Users/20115/Desktop/Micro/interface_GPIO_KPD.h"
 typedef unsigned int uint32_t;
 void SystemInit(){}
 
@@ -50,6 +51,9 @@ void init(void){
 	initPortD();
 	initPortE();
 	initPortF();
+	GPIO_voidPortA_Init();
+	GPIO_voidPortB_Init();
+	GPIO_voidPortF_Init();
 	UART_init();
 }
 	
@@ -66,13 +70,13 @@ int status;
 		/*message out to choose user type: 1-for PC, 2-for GUEST*/
 		char user;
 		//enter here the choice
-		user = KPD_charGetPressedKey();
+		user = KPD_charGetPressedKeyPC();
 		if(user=='1'){
 			/*message out to enter rooms number: if 0 entered stop taking rooms*/
 			int roomNo;
 			int i=0; //room counter
 			while(1){
-				roomNo = KPD_charGetPressedKey();
+				roomNo = KPD_charGetPressedKeyPC();
 				if(roomNo=='0'){
 					break;
 				}
@@ -86,15 +90,15 @@ int status;
 			/*message out to show options for this room: 1-free, 2-occupied, 3-room cleaning*/
 			
 			//enter option here
-			option = KPD_charGetPressedKey();
+			option = KPD_charGetPressedKeyPC();
 			if(option=='1'){
 				/*message out: enter rooms password 4 digits*/
 				char first,second,third,forth;
 				//enter here the password
-				first = KPD_charGetPressedKey();//enter first digit of password
-				second = KPD_charGetPressedKey();//enter second digit of password
-				third = KPD_charGetPressedKey();//enter third digit of password
-				forth = KPD_charGetPressedKey();//enter forth digit of password
+				first = KPD_charGetPressedKeyPC();//enter first digit of password
+				second = KPD_charGetPressedKeyPC();//enter second digit of password
+				third = KPD_charGetPressedKeyPC();//enter third digit of password
+				forth = KPD_charGetPressedKeyPC();//enter forth digit of password
 				rooms[chosenRoom].password[0]=first; //set passowrd for the room
 				rooms[chosenRoom].password[1]=second; //set passowrd for the room
 				rooms[chosenRoom].password[2]=third; //set passowrd for the room

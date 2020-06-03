@@ -3,4 +3,5 @@
 .\main.o: GPIO.h
 .\main.o: interface_GPIO_KPD.h
 .\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\main.o: C:/Users/20115/Desktop/TIVAC.h
 .\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
